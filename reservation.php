@@ -15,7 +15,7 @@
 	<table>
 		<tr>
 			<td>Destination</td>
-			<td><form>
+			<td><form action="index.php" method="POST">
 				<select name="Destination" size="1">
 					<OPTION>Bruxelles
 					<OPTION>Berlin
@@ -28,7 +28,7 @@
 		<tr>
 			<td>Nombre de places</td>
 			<td>
-				<form>
+				<form action="index.php" method="POST">
   					<input type="text" name="nombre de places">
 				</form>
 			</td>
@@ -36,7 +36,7 @@
 		<tr>
 			<td>Assurance anulation</td>
 			<td>
-				<form>
+				<form action="index.php" method="POST">
 					<input type="checkbox" name="assurance">
 				</form>
 			</td>
@@ -44,6 +44,7 @@
 	</table>
 	<p>
 		<input type="button" value="Etape suivante">  <input type="button" value="Annuler la reservation">
+		<input type="hidden" name="page" value="ctrlinfo">
 	</p>
 </body>
 </html>
