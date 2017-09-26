@@ -29,7 +29,7 @@
 			<td>Nombre de places</td>
 			<td>
 				<form>
-  					<input type="text" name="nombre de places" value="">
+  					<input type="text" name="nombre de places">
 				</form>
 			</td>
 		</tr>
@@ -37,7 +37,7 @@
 			<td>Assurance anulation</td>
 			<td>
 				<form>
-					<input type="checkbox" name="assurance" value="">
+					<input type="checkbox" name="assurance">
 				</form>
 			</td>
 		</tr>
