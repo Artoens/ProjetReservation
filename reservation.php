@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="static/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="public/css/main.css" type="text/css" />
 	<title>Reservation d'un vol</title>
 </head>
 <body>
@@ -32,13 +32,13 @@
 			<tr>
 				<td>Nombre de places</td>
 				<td>
-	  				<input type="text" name="nbrp" value=<?php echo $places ?>>
+	  				<input type="text" name="nbrp" value=<?php echo $places; ?>>
 				</td>
 			</tr>
 			<tr>
 				<td>Assurance anulation</td>
 				<td>
-					<input type="checkbox" name="assu" value= <?php echo $ass ?>>
+					<input type="checkbox" name="assu" value= <?php echo $ass; ?>>
 				</td>
 			</tr>
 		</table>

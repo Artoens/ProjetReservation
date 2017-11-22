@@ -4,7 +4,7 @@ class info
 {
 	private $dest = "";
 	private $nbrPlaces = 0;
-	private $ass = false;
+	private $ass = null;
 
 	public function __construct()
 	{
