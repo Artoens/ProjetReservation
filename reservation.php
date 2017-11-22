@@ -1,6 +1,9 @@
+
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/css/main.css" type="text/css" />
 	<title>Reservation d'un vol</title>
 </head>
 <body>
@@ -17,7 +20,7 @@
 			<tr>
 				<td>Destination</td>
 				<td>
-					<select name="dest" size="1">
+					<select name="dest" size="1" value = <?php echo $dest;?>>
 						<OPTION>Bruxelles
 						<OPTION>Berlin
 						<OPTION>Paris
@@ -29,13 +32,13 @@
 			<tr>
 				<td>Nombre de places</td>
 				<td>
-	  				<input type="text" name="nbrp" value="">
+	  				<input type="text" name="nbrp" value=<?php echo $places ?>>
 				</td>
 			</tr>
 			<tr>
 				<td>Assurance anulation</td>
 				<td>
-					<input type="checkbox" name="assu" value="">
+					<input type="checkbox" name="assu" value= <?php echo $ass ?>>
 				</td>
 			</tr>
 		</table>

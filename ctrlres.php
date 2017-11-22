@@ -1,12 +1,9 @@
 <?php
-$dest = $_POST["dest"]
-$nbrp = $_POST["nbrp"]
 
-if !empty($_POST["Assurance"])
-{
-	$assurance = $_POST["assurance"]
-}
+	$infos = unserialize($_SESSION['infos']);
+	$places= $infos->GetPlaces();
+	$ass = $infos->GetAssurance();
+	$dest = $infos->GetDestination();
 
-inculde 'info.php';
-
+include "reservation.php"
 ?>
