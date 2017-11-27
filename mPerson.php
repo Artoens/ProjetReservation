@@ -2,29 +2,32 @@
 
 class person
 {
-	
+	private $firstname;
+	private $lastname;
+	private $age;
 
-	public function __construct($last, $first, $age)
+	public function __construct($firstname, $lastname, $age) 
 	{
-		private $name = $last;
-		private $fname = $first;
-		private $age = $age;
+		$this->firstname = $firstname;
+    	$this->lastname = $lastname;
+		$this->age = $age;
+    }
+
+	public function GetFirstname()
+	{
+		return $this->firstname;
 	}
 
-	public function GetName()
+	public function GetLastname()
 	{
-		return $this->name;
-	}
-
-	public function GetFname()
-	{
-		return $this->fname;
+		return $this->lastname;
 	}
 
 	public function GetAge()
 	{
+
 		return $this->age;
 	}
 
 }
-	?>
+?>

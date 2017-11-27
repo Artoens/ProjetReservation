@@ -20,7 +20,7 @@
 			<tr>
 				<td>Destination</td>
 				<td>
-					<select name="dest" size="1" value = <?php echo $dest;?>>
+					<select name="dest" size="1" value = <?php echo $infos->GetDestination();?>>
 						<OPTION>Bruxelles
 						<OPTION>Berlin
 						<OPTION>Paris
@@ -32,21 +32,22 @@
 			<tr>
 				<td>Nombre de places</td>
 				<td>
-	  				<input type="text" name="nbrp" value=<?php echo $places; ?>>
+	  				<input type="text" name="nbrp" value=<?php echo $infos->GetPlaces();?>>
 				</td>
 			</tr>
 			<tr>
 				<td>Assurance anulation</td>
 				<td>
-					<input type="checkbox" name="assu" value= <?php echo $ass; ?>>
+					<input type="checkbox" name="assu" value= true; ?>
 				</td>
 			</tr>
 		</table>
-	</frorm>
-	<p>
-		<input type="submit" value="Etape suivante"/>
-		<!--<input type="button" value="Annuler la reservation">-->
-		<input type="hidden" name="page" value="ctrlres">
-	</p>
+		<p>
+			<input type="submit" value="Etape suivante"/>
+			<!--<input type="button" value="Annuler la reservation">-->
+			<input type="hidden" name="page" value="ctrlres">
+		</p>
+	</form>
+
 </body>
 </html>

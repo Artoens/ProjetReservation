@@ -22,7 +22,6 @@ class info
 
 	public function GetAssurance()
 	{
-		settype($ass , "integer");
 		return $this->ass;
 	}
 
