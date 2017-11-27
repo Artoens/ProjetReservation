@@ -2,17 +2,18 @@
 
 class person
 {
-	private $name = "";
-	private $fname = "";
-	private $age = 0;
+	
 
-	public function __construct()
+	public function __construct($last, $first, $age)
 	{
+		private $name = $last;
+		private $fname = $first;
+		private $age = $age;
 	}
 
 	public function GetName()
 	{
-		return $this->Name;
+		return $this->name;
 	}
 
 	public function GetFname()
@@ -25,19 +26,5 @@ class person
 		return $this->age;
 	}
 
-	public function SetName($last)
-	{
-		$this->name = $last;
-	}
-
-	public function Set($first)
-	{
-		$this->fname = $first;
-	}
-
-	public function SetAge($age)
-	{
-		$this->age = $age;
-	}
 }
 	?>

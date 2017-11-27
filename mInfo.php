@@ -33,7 +33,7 @@ class info
 
 	public function SetPlaces($nbrP)
 	{
-		$this->nbrPlaces = $nbrP;
+		$this->nbrPlaces = intval($nbrP);
 	}
 
 	public function SetAssurance($assu)

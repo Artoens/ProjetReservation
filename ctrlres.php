@@ -1,6 +1,5 @@
 <?php
 $infos = unserialize($_SESSION['infos']);
-var_dump($infos);
 if (isset($_POST["dest"])) 
 	{
 		$infos->SetDestination($_POST["dest"]);
@@ -21,6 +20,5 @@ else
 include 'reservation.php';
 }
 var_dump($infos);
-
 $_SESSION['infos'] = serialize($infos);
 ?>
