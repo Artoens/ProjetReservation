@@ -20,34 +20,36 @@
 			<tr>
 				<td>Destination</td>
 				<td>
-					<select name="dest" size="1" value = <?php echo $infos->GetDestination();?>>
-						<OPTION>Bruxelles
-						<OPTION>Berlin
-						<OPTION>Paris
-						<OPTION>Dublin
-						<OPTION>Madrid
+					<select name="dest" size="1">
+						<option selected="selected"><?php echo $infos->GetDestination();?></option>
+						<OPTION>Bruxelles</OPTION>
+						<OPTION>Berlin</OPTION>
+						<OPTION>Paris</OPTION>
+						<OPTION>Dublin</OPTION>
+						<OPTION>Madrid</OPTION>
+						<OPTION>Lisbonne</OPTION>
 					</select>
 				</td>
 			</tr>
 			<tr>
 				<td>Nombre de places</td>
 				<td>
-	  				<input type="text" name="nbrp" value=<?php echo $infos->GetPlaces();?>>
+	  				<input type="text" name="nbrp" value= "<?php echo $infos->GetPlaces();?>">
 				</td>
 			</tr>
 			<tr>
 				<td>Assurance anulation</td>
 				<td>
-					<input type="checkbox" name="assu" value= true; ?>
+					<input type="checkbox" name="assu" value= "<?php echo $infos->GetAssurance()?>">
 				</td>
 			</tr>
 		</table>
-		<p>
-			<input type="submit" value="Etape suivante"/>
-			<!--<input type="button" value="Annuler la reservation">-->
-			<input type="hidden" name="page" value="ctrlres">
-		</p>
+		<input type="submit" value="Etape suivante"/>
+		<input type="hidden" name="page" value="ctrlres">
 	</form>
-
+	<form action="index.php" method="POST">
+		<input type="submit" value="Annuler la réservation"/>
+		<input type="hidden" name="cancel" value= "true">
+	</form>
 </body>
 </html>
