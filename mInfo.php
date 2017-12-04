@@ -3,7 +3,7 @@
 class info
 {
 	private $dest = "";
-	private $nbrPlaces = 0;
+	private $nbrPlaces = "";
 	private $ass = false;
 
 	public function __construct()
@@ -32,7 +32,7 @@ class info
 
 	public function SetPlaces($nbrP)
 	{
-		$this->nbrPlaces = intval($nbrP);
+		$this->nbrPlaces = $nbrP;
 	}
 
 	public function SetAssurance($assu)

@@ -1,5 +1,4 @@
 <?php
-require_once("mPerson.php");
 $persons = unserialize($_SESSION['persons']);
 if (isset($_POST["retour"]))
 {
@@ -17,16 +16,32 @@ if (isset($_POST["retour"]))
 }
 else
 {
+	if (isset($_POST["n"]))
+	{
+		$n = $_POST["n"] + 1;
+	}
+	else
+	{
+		$n = 1;
+	}
+
 	if (isset($_POST["name"]) && isset($_POST["first"]) && isset($_POST["age"]))
 	{
-		$persons[$_POST["n"]] = new person($_POST["name"], $_POST["first"], intval($_POST["age"]));
+		$persons[$_POST["n"]] = new person($_POST["first"], $_POST["name"], intval($_POST["age"]));
 		$_SESSION['persons'] = serialize($persons);
 	}
 	$infos = unserialize($_SESSION['infos']);
-	$n = count($persons) + 1;
-	if ($n <= $infos->GetPlaces())
+	if ($n <= intval($infos->GetPlaces()))
 	{
-		$person = new person("", "", "");
+		if (isset($persons[$n]))
+		{
+			$person = $persons[$n];
+		}
+		else
+		{
+			$person = new person("", "", "");
+		}
+
 		include 'info.php';
 	}
 	else

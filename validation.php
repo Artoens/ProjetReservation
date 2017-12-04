@@ -49,7 +49,8 @@
 	</form>
 	<form action="index.php" method="POST">
 		<input type="submit" value="Retour à la page précédente"/>
-		<input type="hidden" name="page" value="crtlinfo">
+		<input type="hidden" name="page" value="ctrlinfo">
+		<input type="hidden" name="retour" value= <?php echo ($infos->GetPlaces() + 1); ?> >
 	</form>
 	<form action="index.php" method="POST">
 		<input type="submit" value="Annuler la réservation"/>

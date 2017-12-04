@@ -43,6 +43,7 @@
 					<input type="checkbox" name="assu" value= "<?php echo $infos->GetAssurance()?>">
 				</td>
 			</tr>
+			<tr><td> </td><td> </td></tr>
 		</table>
 		<input type="submit" value="Etape suivante"/>
 		<input type="hidden" name="page" value="ctrlres">

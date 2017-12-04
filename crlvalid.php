@@ -1,6 +1,5 @@
 <?php
-$persons = unserialize($_SESSION['persons']);
-$infos = unserialize($_SESSION['infos']);
+var_dump($persons);
 
 include 'validation.php';
 ?>

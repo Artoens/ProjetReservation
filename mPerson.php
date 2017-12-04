@@ -2,9 +2,9 @@
 
 class person
 {
-	private $firstname;
-	private $lastname;
-	private $age;
+	private $firstname ="";
+	private $lastname = "";
+	private $age = "";
 
 	public function __construct($firstname, $lastname, $age) 
 	{

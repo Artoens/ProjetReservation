@@ -1,7 +1,9 @@
 <?php
 var_dump($_POST);
-session_start();
 require_once("mInfo.php");
+require_once("mPerson.php");
+
+session_start();
 if (!empty($_POST["cancel"]) && $_POST["cancel"] == "true") 
 {
 	session_destroy();
