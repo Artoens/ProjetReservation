@@ -54,7 +54,7 @@
 	</form>
 	<form action="index.php" method="POST">
 		<input type="submit" value="Annuler la réservation"/>
-		<input type="hidden" name="page" value="crtlconf">
+		<input type="hidden" name="cancel" value="true">
 	</form>
 </body>
 </html>
