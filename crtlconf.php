@@ -1,8 +1,6 @@
 <?php
 $infos = unserialize($_SESSION['infos']);
 $persons = unserialize($_SESSION['persons']);
-var_dump($persons);
-
 $total = 0;
 
 foreach ($persons as $person) 
