@@ -7,10 +7,9 @@ h1{color: red;
    background-color: white;
    font-size:40px;}
 
-#error{	
-	color: red;
-	border: 1px solid red;
-}
+#error{color: red;
+	border: 1px solid red;}
 
 h3{color: #01118B;
    font-size: 20px;}
+table{border: 1px solid black;}

@@ -18,15 +18,15 @@ if (isset($_POST["dest"]) && isset($_POST["nbrp"]))
 		include 'ctrlinfo.php';
 	}
 	else
-	{
+	{/*
 		if ($_POST["dest"] == "")
 		{
 			$error = $error."<div id="error"> Veuillez renter une destination </div>";
 		}
-		if ($_POST["nbrp"] == "") 
+		if ($_POST["nbrp"] == "")
 		{
 			$error = $error."<div id="error"> Veuillez renter une destination </div>";
-		}
+		}*/
 		include 'reservation.php';
 	}
 }

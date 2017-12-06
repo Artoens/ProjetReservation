@@ -27,14 +27,13 @@ else
 	if (isset($_POST["name"]) && isset($_POST["first"]) && isset($_POST["age"]))
 	{
 		$error = "";
-
 		if ($_POST["name"] != "" && $_POST["first"] != "" && $_POST["age"] != "")
 		{
 			$persons[$_POST["n"]] = new person($_POST["first"], $_POST["name"], intval($_POST["age"]));
 			$_SESSION['persons'] = serialize($persons);
 		}
 		else
-		{
+		{/*
 			if ($_POST["name"] == "")
 			{
 				$error = $error."<div id="error"> Veuillez renter un nom </div>";
@@ -61,7 +60,8 @@ else
 				{
 					$error = $error."<div id="error"> Veuillez renter un chiffre </div>";
 				}
-			}
+			}*/
+			$n = $_POST["n"];
 		}
 	}
 
