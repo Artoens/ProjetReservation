@@ -9,6 +9,8 @@
 	<h1>
 		<b>Validation des réservations</b>
 	</h1>
+	<?php echo $error;?>
+	<p></p>
 	<table>
 		<tr>
 			<td>Destination</td>
@@ -42,10 +44,12 @@
 			</td>
 		</tr>
 	</table>
-	<form action="index.php" method="POST">
-		<input type="submit" value="Confirmer"/>
-		<input type="hidden" name="page" value="crtlconf">
-	</form>
+	<?php
+	if ($error = "")
+	{
+		echo '<form action="index.php" method="POST"><input type="submit" value="Confirmer"/><input type="hidden" name="page" value="crtlconf"></form>';
+	}
+	?>
 	<form action="index.php" method="POST">
 		<input type="submit" value="Retour à la page précédente"/>
 		<input type="hidden" name="page" value="ctrlinfo">

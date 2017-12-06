@@ -1,5 +1,7 @@
 <?php
 $persons = unserialize($_SESSION['persons']);
+$error = '';
+
 if (isset($_POST["retour"]))
 {
 	$retour = intval($_POST["retour"]);
@@ -26,41 +28,33 @@ else
 	}
 	if (isset($_POST["name"]) && isset($_POST["first"]) && isset($_POST["age"]))
 	{
-		$error = "";
-		if ($_POST["name"] != "" && $_POST["first"] != "" && $_POST["age"] != "")
+		if ($_POST["name"] != "" && $_POST["first"] != "" && $_POST["age"] != "" && ctype_digit($_POST["age"]))
 		{
 			$persons[$_POST["n"]] = new person($_POST["first"], $_POST["name"], intval($_POST["age"]));
 			$_SESSION['persons'] = serialize($persons);
 		}
 		else
-		{/*
+		{
 			if ($_POST["name"] == "")
 			{
-				$error = $error."<div id="error"> Veuillez renter un nom </div>";
+				$error = $error.'<div id="error"> Veuillez enter un nom </div>';
 			}
 			if ($_POST["first"] == "")
 			{
-				$error = $error."<div id="error"> Veuillez renter un prénom </div>";
+				$error = $error.'<div id="error"> Veuillez enter un prénom </div>';
 			}
 			if ($_POST["age"] == "")
 			{
-				$error = $error."<div id="error"> Veuillez renter un age </div>";
+				$error = $error.'<div id="error"> Veuillez enter un age </div>';
 			}
 			else
 			{
-				try 
+				if (!ctype_digit($_POST["age"]))
 				{
-					$age = intval(_POST["age"]);
-					if ($age < 0)
-					{
-						$error = $error."<div id="error"> Veuillez renter un chiffre prositif </div>";
-					}
-				} 
-				catch (Exception $e) 
-				{
-					$error = $error."<div id="error"> Veuillez renter un chiffre </div>";
+					$error = $error.'<div id="error"> Veuillez enter un age correct </div>';
 				}
-			}*/
+
+			}
 			$n = $_POST["n"];
 		}
 	}

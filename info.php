@@ -2,13 +2,14 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-    <link rel="stylesheet" href="public/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="public/css/main.css" type="text/css">
 	<title>Reservation d'un vol</title>
 <body>
 	<h1>
 	<b>Passager <?php echo $n; ?></b>
 	</h1>
 	<?php echo $error;?>
+	<p></p>
 	<form  action='index.php' method='POST'>
 		<table>
 			<tr>

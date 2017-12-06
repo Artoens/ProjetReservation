@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="public/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="public/css/main.css" type="text/css">
 	<title>Reservation d'un vol</title>
 </head>
 <body>

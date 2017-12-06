@@ -1,15 +1,12 @@
-html{background-color:#99C2FF;
-     font-family: Verdana, fantasy;}
+html{background-color: #a6a6a6;
+     font-family: Verdana;}
 
-list{margin-left: 5%;}
-h1{color: red;
-   border: 5px solid #01118B;
-   background-color: white;
-   font-size:40px;}
+h1{border: 3px solid #01118B;
+   font-size:35px;}
 
 #error{color: red;
-	border: 1px solid red;}
+	border: 1px solid #ff0000;}
 
 h3{color: #01118B;
    font-size: 20px;}
-table{border: 1px solid black;}
+table{border: 2px solid #000000;}
