@@ -10,6 +10,7 @@
 	<h1>
 		<b>Reservation</b>
 	</h1>
+	<?php echo $error;?>
 	<p>
 		Le prix de la place est de 10€ jusqu'à 12 ans. Ensuite de 15€
 		<br>

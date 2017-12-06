@@ -8,6 +8,7 @@
 	<h1>
 	<b>Passager <?php echo $n; ?></b>
 	</h1>
+	<?php echo $error;?>
 	<form  action='index.php' method='POST'>
 		<table>
 			<tr>

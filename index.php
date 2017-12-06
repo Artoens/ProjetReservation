@@ -8,7 +8,8 @@ if (!empty($_POST["cancel"]) && $_POST["cancel"] == "true")
 	session_destroy();
 	include "cancel.php";
 }
-else{
+else
+{
 	if (!empty($_POST["page"]) && is_file($_POST["page"].".php"))
 	{
 	   	include $_POST["page"].".php";
