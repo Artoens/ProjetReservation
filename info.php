@@ -6,7 +6,7 @@
 	<title>Reservation d'un vol</title>
 <body>
 	<h1>
-	<b>Passager <?php echo $n; ?></b>
+	<b>Passager <?php echo $n + 1; ?></b>
 	</h1>
 	<?php echo $error;?>
 	<p></p>

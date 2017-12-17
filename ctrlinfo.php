@@ -1,12 +1,14 @@
 <?php
 $persons = unserialize($_SESSION['persons']);
+var_dump($_POST);
+var_dump($persons);
 $error = '';
 
 if (isset($_POST["retour"]))
 {
 	$retour = intval($_POST["retour"]);
 	$n = $retour - 1;
-	if ($retour == 1)
+	if ($retour == 0)
 	{
 		include "ctrlres.php";
 	}
@@ -24,13 +26,14 @@ else
 	}
 	else
 	{
-		$n = 1;
+		$n = 0;
 	}
 	if (isset($_POST["name"]) && isset($_POST["first"]) && isset($_POST["age"]))
 	{
 		if ($_POST["name"] != "" && $_POST["first"] != "" && $_POST["age"] != "" && ctype_digit($_POST["age"]))
 		{
 			$persons[$_POST["n"]] = new person($_POST["first"], $_POST["name"], intval($_POST["age"]));
+			var_dump($persons);
 			$_SESSION['persons'] = serialize($persons);
 		}
 		else
@@ -60,7 +63,7 @@ else
 	}
 
 	$infos = unserialize($_SESSION['infos']);
-	if ($n <= intval($infos->GetPlaces()))
+	if ($n < intval($infos->GetPlaces()))
 	{
 		if (isset($persons[$n]))
 		{
