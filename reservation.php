@@ -41,7 +41,7 @@
 			<tr>
 				<td>Assurance anulation</td>
 				<td>
-					<input type="checkbox" name="assu" value= "<?php echo $infos->GetAssurance();?>">
+					<input type="checkbox" name="assu" <?php if($infos->GetAssurance()){echo "checked";}?>>
 				</td>
 			</tr>
 			<tr><td> </td><td> </td></tr>

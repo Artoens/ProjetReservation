@@ -6,12 +6,17 @@ class person
 	private $lastname = "";
 	private $age = "";
 
+	//Constructor
 	public function __construct($firstname, $lastname, $age) 
 	{
 		$this->firstname = $firstname;
     	$this->lastname = $lastname;
 		$this->age = $age;
     }
+
+    //======================//
+    //		Getters 		//
+    //======================//
 
 	public function GetFirstname()
 	{

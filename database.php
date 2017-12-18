@@ -1,6 +1,6 @@
 <?php
 
-$conn = new mysqli("localhost:3308", "root", "", "reservation") or new mysqli("localhost:3308", "root", "", "reservation") or die ("Could not select database");
+$conn = new mysqli("localhost	", "root", "", "reservation") or new mysqli("localhost:3308", "root", "", "reservation") or die ("Could not select database");
 
 // Check connection
     if ($conn->connect_error) 

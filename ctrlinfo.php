@@ -1,9 +1,9 @@
 <?php
 $persons = unserialize($_SESSION['persons']);
-var_dump($_POST);
-var_dump($persons);
 $error = '';
 
+//tests if the user clicked on the return button
+//goes to the page depending on where he was
 if (isset($_POST["retour"]))
 {
 	$retour = intval($_POST["retour"]);
@@ -33,7 +33,6 @@ else
 		if ($_POST["name"] != "" && $_POST["first"] != "" && $_POST["age"] != "" && ctype_digit($_POST["age"]))
 		{
 			$persons[$_POST["n"]] = new person($_POST["first"], $_POST["name"], intval($_POST["age"]));
-			var_dump($persons);
 			$_SESSION['persons'] = serialize($persons);
 		}
 		else
