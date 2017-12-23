@@ -51,12 +51,12 @@
 	}
 	?>
 	<form action="index.php" method="POST">
-		<input type="submit" value="Retour à la page précédente"/>
+		<input type="submit" class="button" value="Retour à la page précédente"/>
 		<input type="hidden" name="page" value="ctrlinfo">
 		<input type="hidden" name="retour" value= <?php echo ($infos->GetPlaces()); ?> >
 	</form>
 	<form action="index.php" method="POST">
-		<input type="submit" value="Annuler la réservation"/>
+		<input type="submit" class="button" value="Annuler la réservation"/>
 		<input type="hidden" name="cancel" value="true">
 	</form>
 </body>

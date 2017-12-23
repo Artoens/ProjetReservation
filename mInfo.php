@@ -11,9 +11,7 @@ class info
 	{
 	}
 
-	//======================//
     //		Getters 		//
-    //======================//
 
 	public function GetDestination()
 	{
@@ -30,9 +28,7 @@ class info
 		return $this->ass;
 	}
 
-	//======================//
     //		Setters 		//
-    //======================//
 
 	public function SetDestination($dst)
 	{

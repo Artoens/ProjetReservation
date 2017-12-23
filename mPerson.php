@@ -14,9 +14,7 @@ class person
 		$this->age = $age;
     }
 
-    //======================//
-    //		Getters 		//
-    //======================//
+    //		Getters 	//
 
 	public function GetFirstname()
 	{

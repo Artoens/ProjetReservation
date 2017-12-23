@@ -5,9 +5,10 @@ $infos = unserialize($_SESSION['infos']);
 $i = 0;
 $majeur = false;
 $error = "";
+
+//fill error if someone isnt major
 while (!$majeur && $i  < count($persons))
 {
-	echo 'yo';
 	$person = $persons[$i];
 	if ($person->GetAge() >= 18)
 	{

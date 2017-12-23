@@ -39,15 +39,15 @@ else
 		{
 			if ($_POST["name"] == "")
 			{
-				$error = $error.'<div id="error"> Veuillez enter un nom </div>';
+				$error = $error.'<div id="error"> Veuillez enter un nom </div> <br>';
 			}
 			if ($_POST["first"] == "")
 			{
-				$error = $error.'<div id="error"> Veuillez enter un prénom </div>';
+				$error = $error.'<div id="error"> Veuillez enter un prénom </div><br>';
 			}
 			if ($_POST["age"] == "")
 			{
-				$error = $error.'<div id="error"> Veuillez enter un age </div>';
+				$error = $error.'<div id="error"> Veuillez enter un age </div><br>';
 			}
 			else
 			{

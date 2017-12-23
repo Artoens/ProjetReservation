@@ -3,7 +3,7 @@ $infos = unserialize($_SESSION['infos']);
 $error = '';
 
 //tests if the form is send, fill the info object and go to the next controller
-//if not, display the reservation page
+//if not, displays the reservation page
 if (isset($_POST["dest"]) && isset($_POST["nbrp"])) 
 {
 	if (($_POST["dest"] != "") && ($_POST["nbrp"] != "") && (intval($_POST["nbrp"]) >=1) )
@@ -23,22 +23,22 @@ if (isset($_POST["dest"]) && isset($_POST["nbrp"]))
 		include 'ctrlinfo.php';
 	}
 
-	//add error message
+	//adds to the error message
 	else
 	{	
 		if ($_POST["dest"] == "")
 		{
-			$error = $error.'<div id="error"> Veuillez renter une destination </div>';
+			$error = $error.'<div id="error"> Veuillez renter une destination </div><br>';
 		}
 		if ($_POST["nbrp"] == "")
 		{
-			$error = $error.'<div id="error"> Veuillez renter un nombre de places </div>';
+			$error = $error.'<div id="error"> Veuillez renter un nombre de places </div><br>';
 		}
 		else
 		{
 			if (intval($_POST["nbrp"]) <= 1)
 			{
-				$error = $error.'<div id="error"> Veuillez renter un nombre prositif non nul pour votre nombre de places </div>';
+				$error = $error.'<div id="error"> Veuillez renter un nombre prositif non nul pour votre nombre de places </div><br>';
 			}
 		}
 		include 'reservation.php';

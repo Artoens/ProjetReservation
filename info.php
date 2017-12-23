@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
     <link rel="stylesheet" href="public/css/main.css" type="text/css">
 	<title>Reservation d'un vol</title>
+</head>
 <body>
 	<h1>
 	<b>Passager <?php echo $n + 1; ?></b>
@@ -26,17 +27,17 @@
 			<tr><td> </td><td> </td></tr>
 		</table>
 
-		<input type="submit" value="Etape suivante"/>
+		<input type="submit" class="button" value="Etape suivante"/>
 		<input type="hidden" name="page" value="ctrlinfo">
 		<input type="hidden" name="n" value= <?php echo $n; ?> >
 	</form>
 	<form action="index.php" method="POST">
-		<input type="submit" value="Retour à la page précédente"/>
+		<input type="submit" class="button" value="Retour à la page précédente"/>
 		<input type="hidden" name="page" value="ctrlinfo">
 		<input type="hidden" name="retour" value= <?php echo $n; ?> >
 	</form>
 	<form action="index.php" method="POST">
-		<input type="submit" value="Annuler la réservation"/>
+		<input type="submit" class="button" value="Annuler la réservation"/>
 		<input type="hidden" name="cancel" value= "true">
 	</form>
 </body>

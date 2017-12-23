@@ -13,7 +13,7 @@
 		Votre commande a bien été annulée
 	</p>
 	<form action="index.php" method="POST">
-		<input type="submit" value="Retour à la page d'acceuil"/>
+		<input type="submit" class="button" value="Retour à la page d'acceuil"/>
 		<input type="hidden">
 	</form>
 </body>
