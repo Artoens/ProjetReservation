@@ -19,7 +19,7 @@ while (!$majeur && $i  < count($persons))
 
 if (!$majeur)
 {
-	$error = '<div id="error"> Pour passer commande au moins un passager doit être majeur	 </div>';
+	$error = '<div id="error"> Pour passer commande au moins un passager doit être majeur</div>';
 }
 else
 {

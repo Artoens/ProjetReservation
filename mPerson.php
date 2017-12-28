@@ -1,10 +1,11 @@
 <?php
-
+//this model is used to is used to remember the personal information of each persons
 class person
 {
 	private $firstname ="";
 	private $lastname = "";
 	private $age = "";
+	private $ID = -1;
 
 	//Constructor
 	public function __construct($firstname, $lastname, $age) 
@@ -14,7 +15,7 @@ class person
 		$this->age = $age;
     }
 
-    //		Getters 	//
+    //		Getters 		//
 
 	public function GetFirstname()
 	{
@@ -32,5 +33,16 @@ class person
 		return $this->age;
 	}
 
+	public function GetID()
+	{
+		return $this->ID;
+	}
+
+    //		Setters 		//
+
+    public function SetID($id)
+    {
+    	$this->ID = $id;
+    }
 }
 ?>

@@ -25,7 +25,6 @@
 		foreach ($persons as $person) 
 		{
 			echo "<tr><td>Nom</td><td>".$person->GetFirstname()." ".$person->GetLastname()."</td></tr><tr><td>Age</td><td>".$person->GetAge()."</td></tr>";
-			echo "<tr><td> </td><td> </td></tr>";
 		}
 		?>
 		<tr>
@@ -47,7 +46,7 @@
 	<?php
 	if ($error == "")
 	{
-		echo '<form action="index.php" method="POST"><input type="submit" value="Confirmer"/><input type="hidden" name="page" value="crtlconf"></form>';
+		echo '<form action="index.php" method="POST"><input type="submit" class="button" value="Confirmer"/><input type="hidden" name="page" value="crtlconf"></form>';
 	}
 	?>
 	<form action="index.php" method="POST">

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,6 +27,7 @@
 						<OPTION>Paris</OPTION>
 						<OPTION>Dublin</OPTION>
 						<OPTION>Madrid</OPTION>
+						<OPTION>Milan</OPTION>
 						<OPTION>Lisbonne</OPTION>
 					</select>
 				</td>
@@ -44,7 +44,6 @@
 					<input type="checkbox" name="assu" <?php if($infos->GetAssurance()){echo "checked";}?>>
 				</td>
 			</tr>
-			<tr><td> </td><td> </td></tr>
 		</table>
 		<input type="submit" class="button" value="Etape suivante"/>
 		<input type="hidden" name="page" value="ctrlres">

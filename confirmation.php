@@ -15,3 +15,5 @@
 		<input type="submit"  class="button" value="Retour à la page d'accueil"/>
 		<?php session_destroy()?>
 	</form>
+</body>
+</html>

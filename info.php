@@ -24,7 +24,7 @@
 			<tr>
 				<td> Age </td>
 				<td> <input type='text' name='age' value="<?php echo $person->GetAge(); ?>"> </td>
-			<tr><td> </td><td> </td></tr>
+			</tr>
 		</table>
 
 		<input type="submit" class="button" value="Etape suivante"/>

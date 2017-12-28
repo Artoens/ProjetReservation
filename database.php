@@ -88,8 +88,5 @@ while ($line = $info->fetch_assoc())
 echo "</table>\n";
 
 
-// DELETE FROM `info` WHERE `info`.`IDInfo` = xx;
-// DELETE FROM `preson` WHERE `info`.`IDInfo` = xx;
-// UPDATE `info` SET `Destination` = 'Bruxelles' WHERE `info`.`IDInfo` = 15;
 
 ?>

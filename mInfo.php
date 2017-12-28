@@ -1,10 +1,12 @@
 <?php
-
+//this model is used to is used to remember the general information of the reservation
 class info
 {
 	private $dest = "";
 	private $nbrPlaces = "";
 	private $ass = false;
+	private $edit = false;
+	private $ID = -1;
 
 	//Constructor
 	public function __construct()
@@ -28,6 +30,16 @@ class info
 		return $this->ass;
 	}
 
+	public function GetEdit()
+	{
+		return $this->edit;
+	}
+
+	public function GetID()
+	{
+		return $this->ID;
+	}
+
     //		Setters 		//
 
 	public function SetDestination($dst)
@@ -44,5 +56,16 @@ class info
 	{
 		$this->ass = $assu;
 	}
+
+	public function SetEdit($ed)
+	{
+		$this->edit = $ed;
+	}
+
+	public function SetID($id)
+    {
+    	$this->ID = $id;
+    }
+
 }
-	?>
+?>

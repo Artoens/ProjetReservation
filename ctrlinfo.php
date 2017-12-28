@@ -1,6 +1,7 @@
 <?php
 $persons = unserialize($_SESSION['persons']);
 $error = '';
+$infos = unserialize($_SESSION['infos']);
 
 //tests if the user clicked on the return button
 //goes to the page depending on where he was
@@ -28,13 +29,23 @@ else
 	{
 		$n = 0;
 	}
+	//if all the fields are filled, create a new person
 	if (isset($_POST["name"]) && isset($_POST["first"]) && isset($_POST["age"]))
 	{
 		if ($_POST["name"] != "" && $_POST["first"] != "" && $_POST["age"] != "" && ctype_digit($_POST["age"]))
 		{
-			$persons[$_POST["n"]] = new person($_POST["first"], $_POST["name"], intval($_POST["age"]));
+			//create a new person
+			$p = new person($_POST["first"], $_POST["name"], intval($_POST["age"]));
+			//sets the new person the ID of the old-one
+			if (isset($persons[$_POST["n"]]))
+			{
+				$p->SetID($persons[$_POST["n"]]->GetID());
+			}
+			//overwrites the person if isset. If not, sets it
+			$persons[$_POST["n"]] = $p;
 			$_SESSION['persons'] = serialize($persons);
 		}
+		//fill the error message
 		else
 		{
 			if ($_POST["name"] == "")
@@ -61,7 +72,8 @@ else
 		}
 	}
 
-	$infos = unserialize($_SESSION['infos']);
+	//displays the next page, if it's personal information again
+	//initializes a new person or displays an registred one (if it is being changed)
 	if ($n < intval($infos->GetPlaces()))
 	{
 		if (isset($persons[$n]))
